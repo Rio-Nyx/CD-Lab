@@ -89,11 +89,11 @@ int start() {
   for (int i = 0; i < no_trans; i++) {
     scanf("%d%d", &initial, &final);
     scanf("%d", &value);
-    if (transition_table[initial][final] != -1) {
-      transition_table[i][0] = initial;
-      transition_table[i][1] = final;
-      transition_table[i][2] = value;
-    }
+    // if (transition_table[initial][final] != -1) {
+    transition_table[i][0] = initial;
+    transition_table[i][1] = final;
+    transition_table[i][2] = value;
+    // }
   }
   int inputs[100];
   int no_inputs;
