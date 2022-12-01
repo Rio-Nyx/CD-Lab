@@ -87,14 +87,15 @@ int main(){
 	  //   }
     }
     for(int i=1;i<num_states;i++){
-			for(int j=0;j<i;j++){
-				is_to_be_marked = (is_final(i) && !is_final(j)) || (!is_final(i) && is_final(j));
-			}
-			if(is_to_be_marked){
+	for(int j=0;j<i;j++){
+		is_to_be_marked = (is_final(i) && !is_final(j)) || (!is_final(i) && is_final(j));
+		if(is_to_be_marked){
 			mt_table[i][j] = 1;
 			mt_table[i][j] = 1;
-	    }
-		}
+		}	
+	}
+			
+    }
     int count = 0;
     while(1){
     	if(count>num_states*num_states){
